@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="light_gray">#C0C0C0</color>
+  <color name="purple_200">@color/light_gray</color>
+  <color name="purple_500">#FF6200EE</color>
+  <color name="purple_700">#FF3700B3</color>
+  <color name="teal_200">#FF03DAC5</color>
+  <color name="teal_700">#FF018786</color>
+  <color name="colorButtonNormal">#EF6C00</color>
+  <color name="colorAccent">#EF6C00</color>
+  <color name="colorPrimary">#FF8F00</color>
+  <color name="colorPrimaryVariant">#EF6C00</color>
+  <color name="colorOnPrimary">@color/white</color>
+  <!-- Secondary brand color. -->
+  <color name="colorSecondary">#6C6C6C</color>
+  <color name="colorSecondaryVariant">#474747</color>
+  <color name="colorOnSecondary">#EF6C00</color>
+  </resources>

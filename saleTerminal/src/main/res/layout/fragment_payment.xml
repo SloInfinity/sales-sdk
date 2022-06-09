@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    tools:context=".ui.nexo.PaymentFragment">
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/input_amount_layout"
+       style="@style/TextInputOutline"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:hint="@string/amount"
+       app:endIconContentDescription="@string/ip"
+       app:endIconDrawable="@drawable/outline_clear_24"
+       app:endIconMode="clear_text"
+       app:errorEnabled="true"
+       app:helperText="@string/nexo_betrag_in_format"
+       app:helperTextEnabled="true"
+       app:hintAnimationEnabled="true"
+       app:hintEnabled="true"
+       app:suffixText="€">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:text="1000"
+                tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <Button
+        android:id="@+id/send"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_amount_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/zahlung_senden" />
+
+</RelativeLayout>

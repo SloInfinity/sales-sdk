@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="TextInputOutline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCollapsedPaddingTop">4dp</item>
+        <item name="startIconTint">?colorAccent</item>
+        <item name="boxStrokeColor">?colorAccent</item>
+        <item name="boxStrokeErrorColor">?colorError</item>
+        <!-- <item name="errorTextAppearance">@style/TextAppearance.MyTheme.Body1</item> -->
+        <item name="hintEnabled">false</item>
+    <!--  <item name="helperTextTextAppearance">@style/TextAppearance.MyTheme.Body1</item> -->
+        <item name="helperTextTextColor">?colorAccent</item>
+        <item name="endIconTint">?colorAccent</item>
+        <item name="endIconDrawable">@drawable/outline_clear_24</item>
+        <item name="endIconMode">clear_text</item>
+    </style>
+</resources>

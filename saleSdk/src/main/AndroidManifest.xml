@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="de.lavego.saleSdk">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name="de.lavego.sdk.App"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:ignore="UnusedAttribute">
+        <service
+            android:name="de.lavego.nexo.NexoPOIService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+        <service
+            android:name="de.lavego.zvt.ZvtPOIService"
+            android:enabled="true">
+        </service>
+    </application>
+
+</manifest>

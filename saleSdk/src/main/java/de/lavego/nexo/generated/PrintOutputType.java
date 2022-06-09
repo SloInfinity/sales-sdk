@@ -1,0 +1,190 @@
+//
+// Diese Datei wurde mit der JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.8-b130911.1802 generiert
+// Siehe <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// Änderungen an dieser Datei gehen bei einer Neukompilierung des Quellschemas verloren.
+// Generiert: 2021.01.11 um 01:16:00 PM CET
+//
+package de.lavego.nexo.generated;
+
+import org.simpleframework.xml.Attribute;
+import org.simpleframework.xml.Element;
+/**
+ * Definition: Information to print and the way to process the print. --
+ * 				Usage: It contains a complete print operation for a Print Device
+ * 				type.
+ *
+ * <p>Java-Klasse für PrintOutputType complex type.
+ *
+ * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
+ *
+ * <pre>
+ * &lt;complexType name="PrintOutputType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="OutputContent" type="{}OutputContentType"/>
+ *         &lt;element name="OutputSignature" type="{}OutputSignatureType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attribute name="DocumentQualifier" use="required" type="{}DocumentQualifierTypeCode" />
+ *       &lt;attribute name="ResponseMode" use="required" type="{}ResponseModeTypeCode" />
+ *       &lt;attribute name="IntegratedPrintFlag" type="{}IntegratedPrintFlagType" default="false" />
+ *       &lt;attribute name="RequiredSignatureFlag" type="{}RequiredSignatureFlagType" default="false" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ *
+ *
+ */
+public class PrintOutputType {
+    @Element(name = "OutputContent", required = true)
+    protected OutputContentType outputContent;
+    @Element(name = "OutputSignature", required = false)
+    protected byte[] outputSignature;
+    @Attribute(name = "DocumentQualifier", required = true)
+    protected String documentQualifier;
+    @Attribute(name = "ResponseMode", required = true)
+    protected String responseMode;
+    @Attribute(name = "IntegratedPrintFlag", required = false)
+    protected Boolean integratedPrintFlag;
+    @Attribute(name = "RequiredSignatureFlag", required = false)
+    protected Boolean requiredSignatureFlag;
+    /**
+     * Ruft den Wert der outputContent-Eigenschaft ab.
+     *
+     * @return
+     *     possible object is
+     *     {@link OutputContentType }
+     *
+     */
+    public OutputContentType getOutputContent() {
+        return outputContent;
+    }
+    /**
+     * Legt den Wert der outputContent-Eigenschaft fest.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link OutputContentType }
+     *
+     */
+    public void setOutputContent(OutputContentType value) {
+        this.outputContent = value;
+    }
+    /**
+     * Ruft den Wert der outputSignature-Eigenschaft ab.
+     *
+     * @return
+     *     possible object is
+     *     byte[]
+     */
+    public byte[] getOutputSignature() {
+        return outputSignature;
+    }
+    /**
+     * Legt den Wert der outputSignature-Eigenschaft fest.
+     *
+     * @param value
+     *     allowed object is
+     *     byte[]
+     */
+    public void setOutputSignature(byte[] value) {
+        this.outputSignature = value;
+    }
+    /**
+     * Ruft den Wert der documentQualifier-Eigenschaft ab.
+     *
+     * @return
+     *     possible object is
+     *     {@link String }
+     *
+     */
+    public String getDocumentQualifier() {
+        return documentQualifier;
+    }
+    /**
+     * Legt den Wert der documentQualifier-Eigenschaft fest.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setDocumentQualifier(String value) {
+        this.documentQualifier = value;
+    }
+    /**
+     * Ruft den Wert der responseMode-Eigenschaft ab.
+     *
+     * @return
+     *     possible object is
+     *     {@link String }
+     *
+     */
+    public String getResponseMode() {
+        return responseMode;
+    }
+    /**
+     * Legt den Wert der responseMode-Eigenschaft fest.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setResponseMode(String value) {
+        this.responseMode = value;
+    }
+    /**
+     * Ruft den Wert der integratedPrintFlag-Eigenschaft ab.
+     *
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *
+     */
+    public boolean isIntegratedPrintFlag() {
+        if (integratedPrintFlag == null) {
+            return false;
+        } else {
+            return integratedPrintFlag;
+        }
+    }
+    /**
+     * Legt den Wert der integratedPrintFlag-Eigenschaft fest.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *
+     */
+    public void setIntegratedPrintFlag(Boolean value) {
+        this.integratedPrintFlag = value;
+    }
+    /**
+     * Ruft den Wert der requiredSignatureFlag-Eigenschaft ab.
+     *
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *
+     */
+    public boolean isRequiredSignatureFlag() {
+        if (requiredSignatureFlag == null) {
+            return false;
+        } else {
+            return requiredSignatureFlag;
+        }
+    }
+    /**
+     * Legt den Wert der requiredSignatureFlag-Eigenschaft fest.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *
+     */
+    public void setRequiredSignatureFlag(Boolean value) {
+        this.requiredSignatureFlag = value;
+    }
+}

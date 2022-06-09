@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/mobile_navigation"
+            android:label="@string/home"
+            app:startDestination="@id/nav_settings">
+    <fragment android:id="@+id/nav_nexo"
+              android:name="de.lavego.saleTerminal.ui.nexo.NexoFragment"
+              android:label="@string/nexo"
+              tools:layout="@layout/fragment_nexo"><action
+        android:id="@+id/action_nav_nexo_to_nav_settings"
+        app:destination="@id/nav_settings" /></fragment>
+
+    <fragment android:id="@+id/nav_zvt"
+              android:name="de.lavego.saleTerminal.ui.zvt.ZvtFragment"
+              android:label="@string/zvt"
+              tools:layout="@layout/fragment_zvt"><action
+        android:id="@+id/action_nav_zvt_to_nav_settings"
+        app:destination="@id/nav_settings" /></fragment>
+
+    <fragment android:id="@+id/nav_settings"
+              android:name="de.lavego.saleTerminal.ui.settings.SettingsFragment"
+              android:label="@string/settings"
+              tools:layout="@layout/settings_fragment"/>
+
+</navigation>

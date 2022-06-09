@@ -1,0 +1,4 @@
+include ':utils'
+include ':saleSdk'
+include ':saleTerminal'
+rootProject.name = "lavegoSaleSdk"

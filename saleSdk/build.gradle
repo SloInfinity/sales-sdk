@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion "31.0.0"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 31
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        resources {
+            excludes += ['META-INF/DEPENDENCIES', 'META-INF/LICENSE', 'META-INF/LICENSE.txt', 'META-INF/license.txt', 'META-INF/NOTICE', 'META-INF/NOTICE.txt', 'META-INF/notice.txt', 'META-INF/ASL2.0', 'META-INF/LICENSE.md', 'META-INF/NOTICE.md', 'com/sun/xml/bind/unmarshaller/Messages*.properties', 'com/sun/xml/bind/Messages.properties']
+        }
+    }
+
+
+    aidlPackageWhiteList "src/main/aidl/de/lavego/nexo/INexoPOIService.aidl"
+    aidlPackageWhiteList "src/main/aidl/de/lavego/sdk/IPaymentServiceCallback.aidl"
+    //aidlPackageWhiteList "src/main/aidl/de/lavego/nexo/IZvtPaymentServiceCallback.aidl"
+    //aidlPackageWhiteList "src/main/aidl/de/lavego/sdk/IZvtPOIService.aidl"
+    ndkVersion '21'
+}
+
+dependencies {
+    debugImplementation project(":utils")
+    implementation project(":utils")
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'org.simpleframework:simple-xml:2.7.1'
+    implementation 'com.google.code.gson:gson:2.8.7'
+    implementation 'commons-cli:commons-cli:1.4'
+    implementation 'commons-codec:commons-codec:1.15'
+    //implementation 'xerces:xercesImpl:2.12.1'
+}

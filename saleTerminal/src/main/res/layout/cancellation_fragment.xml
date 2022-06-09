@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    tools:context=".ui.zvt.CancellationFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_receipt_no_layout"
+        style="@style/TextInputOutline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:hint="@string/receipt_no"
+        app:endIconContentDescription="@string/ip"
+        app:endIconDrawable="@drawable/outline_clear_24"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperText="@string/cancellation_helper"
+        app:helperTextEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true"
+        app:suffixText="¢">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_receipt_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:digits="0123456789"
+                android:inputType="numberSigned"
+                android:maxLines="1"
+                tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/send"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/input_receipt_no_layout"
+        android:text="@string/cancellation_send" />
+
+</RelativeLayout>
+

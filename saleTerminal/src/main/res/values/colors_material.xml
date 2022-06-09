@@ -1,0 +1,9 @@
+<?data version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <!--
+    <color name="colorAccent">@color/colorControlNormalBlue</color>
+    -->
+    <!--<color name="foregroundColor">#fe000000</color>-->
+    </resources>

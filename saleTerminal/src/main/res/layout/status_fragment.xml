@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.zvt.RegisterFragment">
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/input_password_layout"
+       style="@style/TextInputOutline"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentTop="true"
+       android:hint="@string/password"
+       app:endIconContentDescription="@string/password"
+       app:endIconDrawable="@drawable/outline_clear_24"
+       app:endIconMode="clear_text"
+       app:errorEnabled="false"
+       app:helperText="@string/password_helper_text"
+       app:helperTextEnabled="true"
+       app:hintAnimationEnabled="true"
+       app:hintEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:maxLines="1"
+                android:text="010203"
+                tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/send"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/input_password_layout"
+        android:layout_marginTop="10dp"
+        android:text="@string/send_status" />
+
+</RelativeLayout>

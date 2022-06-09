@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">LavegoSdkSimulation</string>
+    <string name="nav_header_title">LAVEGO AG</string>
+    <string name="nav_header_subtitle">Retailer SDK Demo</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="start_nexo">Start nexoFast</string>
+    <string name="payment">Payment</string>
+    <string name="reconciliation">Reconciliation</string>
+    <string name="nexo">Nexo</string>
+    <string name="settings">Settings</string>
+    <string name="port">Port</string>
+    <string name="ip">IP</string>
+    <string name="zvt">ZVT</string>
+    <string name="home">Home</string>
+    <string name="ip_inut_helper_text">IP address from terminal</string>
+    <string name="port_input_helper_text">Port from terminal</string>
+    <string name="payment_protocol">Protocol cash register interface</string>
+    <string name="diagnosis">Diagnosis</string>
+    <string name="status_enquiry">Status</string>
+    <string name="amount">Amount</string>
+    <string name="betrag_in_format">Amount in CENT 1099 for e.g. 10.99€</string>
+    <string name="zahlung_senden">Send Payment</string>
+    <string name="register">Register</string>
+    <string name="password">Password or PIN</string>
+    <string name="password_helper_text">Password or PIN</string><string name="send_register">Send Register</string><string name="diagnosis_send">Send Diagnosis</string><string name="diag_line">Line Test</string><string name="diag_extended">Extended Diagnosis</string><string name="diag_configuration">Configuration</string><string name="diag_emv">EMV Configuration</string><string name="diag_ep2">EP2 Configuration</string><string name="please_send_command">Send command, please...</string><string name="reconciliation_send">Send Reconciliation</string><string name="custom_send">Send Custom</string><string name="custom_command">Custom</string><string name="cancellation_send">Send Cancallation</string><string name="receipt_no">Receipt No.</string><string name="cancellation_helper">Need the receiptNo from one previous made transaction!</string><string name="cancellation">Cancellation</string><string name="send_status">Send Statud</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string><string name="login_helper_text">Login or Operator Id</string><string name="nexo_betrag_in_format">"Betrag in €. String muss BigDecimal parsen können! "</string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    tools:context=".ui.nexo.LoginFragment">
+
+   <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/username_layout"
+       style="@style/TextInputOutline"
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/edit_height"
+       android:layout_alignParentTop="true"
+       android:layout_marginTop="5dp"
+       android:layout_marginBottom="5dp"
+       android:hint="@string/login"
+       app:endIconContentDescription="@string/password"
+       app:endIconDrawable="@drawable/outline_clear_24"
+       app:endIconMode="clear_text"
+       app:errorEnabled="true"
+       app:helperText="@string/login_helper_text"
+       app:helperTextEnabled="true"
+       app:hintAnimationEnabled="true"
+       app:hintEnabled="true">
+       <com.google.android.material.textfield.TextInputEditText
+           android:id="@+id/username"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:inputType="textPersonName"
+           android:maxLines="1"
+           android:text="admin"
+           tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passowrd_layout"
+        style="@style/TextInputOutline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_below="@+id/username_layout"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:hint="@string/password"
+        app:endIconDrawable="@drawable/outline_clear_24"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:helperText="@string/password_helper_text"
+        app:helperTextEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:text="admin"
+            tools:ignore="HardcodedText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/login"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passowrd_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="5dp"
+        android:minWidth="@dimen/button_min_width"
+        android:tag="login"
+        android:text="@string/login" />
+
+</RelativeLayout>

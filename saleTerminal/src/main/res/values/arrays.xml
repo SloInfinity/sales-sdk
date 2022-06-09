@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="diag_types">
+        <item>@string/diag_line</item>
+        <item>@string/diag_extended</item>
+        <item>@string/diag_configuration</item>
+        <item>@string/diag_emv</item>
+        <item>@string/diag_ep2</item>
+    </string-array>
+    <string-array name="custom_commands">
+        <item>0801 00</item>
+        <item>061A 00</item>
+        <item>0620 05 010203 0301</item>
+        <item>0693 03 010203</item>
+        <item>0602 00</item>
+    </string-array>
+</resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    tools:context=".ui.zvt.DiagnosisFragment">
+    <!--
+        0x01 line diagnosis
+        0x02 extended-diagnosis (default-value)
+        0x03 configuration diagnosis
+        0x04 EMV configuration diagnosis
+        0x05 EP2 configuration
+    -->
+    <Spinner
+        android:id="@+id/diagnosis_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:entries="@array/diag_types" />
+
+    <Button
+        android:id="@+id/send"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/diagnosis_type"
+        android:text="@string/diagnosis_send" />
+
+</RelativeLayout>
+

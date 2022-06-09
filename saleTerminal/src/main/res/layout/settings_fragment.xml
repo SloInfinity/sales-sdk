@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingRight="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                tools:context=".ui.settings.SettingsFragment">
+
+    <TextView android:id="@+id/help_tv"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="30dp"
+              android:layout_marginBottom="50dp"
+              android:gravity="center"
+              android:text="@string/settings"
+              android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+              android:textColor="@color/colorPrimary" />
+
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_ip_layout"
+                                                           style="@style/TextInputOutline"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_below="@id/help_tv"
+                                                           android:layout_marginTop="30dp"
+                                                           android:hint="@string/ip"
+                                                           app:endIconContentDescription="@string/ip"
+                                                           app:endIconDrawable="@drawable/outline_clear_24"
+                                                           app:endIconMode="clear_text"
+                                                           app:errorEnabled="true"
+                                                           app:helperText="@string/ip_inut_helper_text"
+                                                           app:helperTextEnabled="true"
+                                                           app:hintAnimationEnabled="true"
+                                                           app:hintEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/input_ip"
+                                                                     android:layout_width="match_parent"
+                                                                     android:layout_height="wrap_content"
+                                                                     android:inputType="textNoSuggestions"
+                                                                     android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/input_port_layout"
+                                                           style="@style/TextInputOutline"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           android:layout_below="@id/input_ip_layout"
+                                                           android:hint="@string/port"
+                                                           app:endIconContentDescription="@string/port"
+                                                           app:endIconDrawable="@drawable/outline_clear_24"
+                                                           app:endIconMode="clear_text"
+                                                           app:errorEnabled="true"
+                                                           app:helperText="@string/port_input_helper_text"
+                                                           app:helperTextEnabled="true"
+                                                           app:hintAnimationEnabled="true"
+                                                           app:hintEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/input_port"
+                                                                     android:layout_width="match_parent"
+                                                                     android:layout_height="wrap_content"
+                                                                     android:inputType="numberSigned"
+                                                                     android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <RadioGroup android:id="@+id/protocol_rbg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/input_port_layout"
+                android:layout_marginTop="20dp"
+                android:checkedButton="@+id/nexo_rb">
+        <RadioButton android:id="@+id/zvt_rb"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/zvt" />
+        <RadioButton android:id="@+id/nexo_rb"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:text="@string/nexo" />
+    </RadioGroup>
+
+</RelativeLayout>
+
