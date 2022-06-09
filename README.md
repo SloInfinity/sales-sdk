@@ -1,80 +1,49 @@
 # sales-sdk
 
-One Paragraph of project description goes here
+The sales-sdk is for Android cash register software.
+
+The protocol is ZVT (production) or alternatively Nero-4.0 (alpha status/untested with certified terminals). The ZVT interface is already used productively and can be used directly.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Clone the project and load it into Android Studio.
+
+- salesSdk is SDK itself
+- saleTerminal is the demo app and documentation at the same time.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You need a actual android-studio from "https://developer.android.com/studio". At least you need the android sdk and build with gradle only
+
+* [AndroidStudio](https://developer.android.com/studio) - Android Studio
 
 ```
-Give examples
+~/tmp λ git clone git@github.com:lavego/sales-sdk.git salesSdk
+Cloning into 'salesSdk'...
+remote: Enumerating objects: 1225, done.
+remote: Counting objects: 100% (1225/1225), done.
+remote: Compressing objects: 100% (866/866), done.
+remote: Total 1225 (delta 334), reused 1215 (delta 334), pack-reused 0
+Receiving objects: 100% (1225/1225), 837.48 KiB | 1.99 MiB/s, done.
+Resolving deltas: 100% (334/334), done.
+
+~/tmp λ cd salesSdk
+~/tmp/salesSdk λ export ANDROID_SDK_ROOT=/Users/ah/Library/Android/sdk
+~/tmp/salesSdk λ ./gradlew assemble
+
+> Configure project :
+...
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
+TODO, write how to contribute...
+
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Andre Heine/Lavego AG** - *Initial work* - [Lavego AG](https://www.lavego.de)
 
 ## License
 
@@ -82,6 +51,7 @@ This project is licensed under the GNU Lesser General Public License v3.0 - see 
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* [Android](https://developer.android.com) - Android Studio
+* [ZVT](https://www.terminalhersteller.de/downloads/PA00P015_13.08_en.pdf) - ZVT Spec 13.08
+* [ZVT part 2](https://www.terminalhersteller.de/downloads/PA00P016_04_en.pdf) - ZVT Part 2
+* [Nexo Standards](https://www.nexo-standards.org/) - Nexo
