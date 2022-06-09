@@ -49,6 +49,14 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
 
+## Developing you cash-register software
+
+To get started quickly, take a look at the "saleTerminal" project.
+
+In saleSdk the best entry is: 
+
+* [sdk start](https://github.com/lavego/sales-sdk/blob/main/saleSdk/src/main/java/de/lavego/sdk/PaymentTerminalActivity.java)
+
 ## Acknowledgments
 
 * [Android](https://developer.android.com) - Android Studio
