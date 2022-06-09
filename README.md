@@ -2,7 +2,7 @@
 
 The sales-sdk is for Android cash register software.
 
-The protocol is ZVT (production) or alternatively Nero-4.0 (alpha status/untested with certified terminals). The ZVT interface is already used productively and can be used directly.
+The protocol is ZVT (production) or alternatively Nexo-4.0 (alpha status/untested with certified terminals). The ZVT interface is already used productively and can be used directly.
 
 ## Getting Started
 
@@ -16,6 +16,7 @@ Clone the project and load it into Android Studio.
 You need a actual android-studio from "https://developer.android.com/studio". At least you need the android sdk and build with gradle only
 
 * [AndroidStudio](https://developer.android.com/studio) - Android Studio
+
 
 ```
 ~/tmp λ git clone git@github.com:lavego/sales-sdk.git salesSdk
