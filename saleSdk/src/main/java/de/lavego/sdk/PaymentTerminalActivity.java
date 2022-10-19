@@ -35,23 +35,23 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
             Log.i("NEXO", String.format("onResponse%n%s", response));
             TransactionData result = new TransactionData();
             result.data = response;
-            
+
             PaymentTerminalActivity.this.onResponse(response, type);
-            
+
             if (type == Constants.PAYMENT) { PaymentTerminalActivity.this.onPaymentResult(result); }
             //else { PaymentTerminalActivity.this.onResponse(response, type); }
         }
-        
+
         @Override
         public void onSocketConnected(boolean connected) throws RemoteException
         {
             Log.i("NEXO", String.format("onSocketConnected %s", connected));
         }
     };
-    
+
     private INexoPOIService nexoPOIService = null;
     private ZvtPOIService   zvtPOIService  = null;
-    
+
     public void bindService()
     {
         switch (transportConfiguration().paymentProtocol)
@@ -66,10 +66,10 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
                 break;
         }
     }
-    
+
     @NonNull
     public abstract TransportConfiguration transportConfiguration();
-    
+
     @CallSuper
     public int command(int action)
     {
@@ -110,13 +110,13 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             Log.e("ZVT", "command not implemented yet");
         }
-        
+
         return 1;
     }
-    
+
     @NonNull
     public abstract SaleConfiguration saleConfiguration();
-    
+
     /*
     @CallSuper
     public void doConnectTerminal()
@@ -159,10 +159,10 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             e.printStackTrace();
         }
-        
+
         return 1;
     }
-    
+
     @Override
     public int doDiagnosis(int type)
     {
@@ -180,7 +180,7 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         }
         return 1;
     }
-    
+
     @CallSuper
     @Override
     public int doLogin()
@@ -202,10 +202,10 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             e.printStackTrace();
         }
-        
+
         return 1;
     }
-    
+
     @CallSuper
     @Override
     public int doPayment(@NonNull Payment payment)
@@ -227,10 +227,10 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             e.printStackTrace();
         }
-        
+
         return 1;
     }
-    
+
     @Override
     public int doReconciliation()
     {
@@ -248,7 +248,7 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         }
         return 1;
     }
-    
+
     @CallSuper
     @Override
     public int doStatus()
@@ -265,10 +265,10 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             e.printStackTrace();
         }
-        
+
         return 1;
     }
-    
+
     @Override
     public int doCancellation(int receiptNo)
     {
@@ -284,25 +284,25 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             e.printStackTrace();
         }
-        
+
         return 1;
     }
-    
+
     public abstract void launchSelf(int delayMillies);
-    
+
     @Override
     @CallSuper
     protected void onCreate(@Nullable Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
     }
-    
+
     @Override
     @CallSuper
     protected void onDestroy()
     {
         super.onDestroy();
-        
+
         try
         {
             if (nexoPOIService != null)
@@ -319,10 +319,10 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             e.printStackTrace();
         }
-        
+
         unbindService();
     }
-    
+
     public void unbindService()
     {
         try
@@ -341,9 +341,9 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
             zvtPOIService = null;
         }
     }
-    
+
     public abstract void onPaymentResult(@NonNull TransactionData result);
-    
+
     @Override
     public void onRawData(@NonNull String hex)
     {
@@ -358,55 +358,55 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
             Log.i("ACTIVITY", String.format("onRawData: %n%s", hex));
         }
     }
-    
+
     @Override
     public void onStatus(@NonNull String status)
     {
         Log.i("ACTIVITY", String.format("onStatus: %s", status));
     }
-    
+
     @Override
     public void onIntermediateStatus(@NonNull String status)
     {
         Log.i("ACTIVITY", String.format("onIntermediateStatus: %s", status));
     }
-    
+
     @Override
     public void onCompletion(@NonNull String completion)
     {
         Log.i("ACTIVITY", String.format("onCompletion: %s", completion));
     }
-    
+
     @Override
     public void onReceipt(@NonNull String receipt)
     {
         Log.i("ACTIVITY", String.format("onReceipt: {%s}", receipt));
     }
-    
+
     @Override
     public void onError(@NonNull String error)
     {
         Log.i("ACTIVITY", String.format("onError: {%s}", error));
     }
-    
+
     @Override
     public void onSocketConnected(boolean connected)
     {
         Log.i("ACTIVITY", String.format("onSocketConnected %s", connected));
     }
-    
+
     public abstract void onResponse(@NonNull String response, int type);
-    
+
     @Override
     @CallSuper
     public void onServiceConnected(ComponentName name, IBinder service)
     {
         Log.d("SDK", String.format("onServiceConnected ComponentName %s pkg=%s", name.getClassName(), name.getPackageName()));
-        
+
         try
         {
             final TransportConfiguration tc = transportConfiguration();
-            
+
             if (name.getClassName().contains(NexoPOIService.class.getName()))
             {
                 Log.i("NEXO", "onServiceConnected calls connectTerminalAppDefault");
@@ -428,7 +428,7 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
             e.printStackTrace();
         }
     }
-    
+
     @Override
     @CallSuper
     public void onServiceDisconnected(ComponentName name)
@@ -437,6 +437,44 @@ public abstract class PaymentTerminalActivity extends AppCompatActivity implemen
         {
             if (nexoPOIService != null) { nexoPOIService.removeCallback(iPaymentServiceCallback); }
             if (zvtPOIService != null) { zvtPOIService.removeCallback(PaymentTerminalActivity.this); }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            nexoPOIService = null;
+            zvtPOIService = null;
+        }
+    }
+
+    @CallSuper
+    public void removeCallback()
+    {
+        try
+        {
+            if (nexoPOIService != null) { nexoPOIService.removeCallback(iPaymentServiceCallback); }
+            if (zvtPOIService != null) { zvtPOIService.removeCallback(PaymentTerminalActivity.this); }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+        finally
+        {
+            nexoPOIService = null;
+            zvtPOIService = null;
+        }
+    }
+
+    @CallSuper
+    public void addCallback()
+    {
+        try
+        {
+            if (nexoPOIService != null) { nexoPOIService.addCallback(iPaymentServiceCallback); }
+            if (zvtPOIService != null) { zvtPOIService.addCallback(PaymentTerminalActivity.this); }
         }
         catch (Exception e)
         {

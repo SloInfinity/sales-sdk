@@ -34,6 +34,7 @@ android {
     //aidlPackageWhiteList "src/main/aidl/de/lavego/nexo/IZvtPaymentServiceCallback.aidl"
     //aidlPackageWhiteList "src/main/aidl/de/lavego/sdk/IZvtPOIService.aidl"
     ndkVersion '21'
+    namespace 'de.lavego.saleSdk'
 }
 
 dependencies {
