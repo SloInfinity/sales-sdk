@@ -1,8 +1,8 @@
 # sales-sdk
 
-The sales-sdk is for Android cash register software.
+The sales-sdk is used to connect an ECR (Electronic Cash Register) with an Android-based PoS Payment device.
 
-The protocol is ZVT (production) or alternatively Nexo-4.0 (alpha status/untested with certified terminals). The ZVT interface is already used productively and can be used directly.
+The protocol is ZVT or alternatively nexoRetailer (alpha status/untested with certified terminals). ZVT protocol is already used in production.
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ Clone the project and load it into Android Studio.
 
 ### Prerequisites
 
-You need a actual android-studio from "https://developer.android.com/studio". At least you need the android sdk and build with gradle only
+You need an actual android-studio from "https://developer.android.com/studio". At least you need the android sdk and build with gradle only.
 
 * [AndroidStudio](https://developer.android.com/studio) - Android Studio
 
@@ -44,13 +44,13 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Authors
 
-* **Andre Heine/Lavego AG** - *Initial work* - [Lavego AG](https://www.lavego.de)
+* **Andre Heine/LAVEGO AG** - *Initial work* - [LAVEGO AG](https://www.lavego.de)
 
 ## License
 
 This project is licensed under the GNU Lesser General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
 
-## Developing you cash-register software
+## Developing your ECR software
 
 To get started quickly, take a look at the "saleTerminal" project.
 
@@ -63,4 +63,4 @@ In saleSdk the best entry is:
 * [Android](https://developer.android.com) - Android Studio
 * [ZVT](https://www.terminalhersteller.de/downloads/PA00P015_13.08_en.pdf) - ZVT Spec 13.08
 * [ZVT part 2](https://www.terminalhersteller.de/downloads/PA00P016_04_en.pdf) - ZVT Part 2
-* [Nexo Standards](https://www.nexo-standards.org/) - Nexo
+* [Nexo Standards](https://www.nexo-standards.org/) - nexo
