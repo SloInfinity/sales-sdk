@@ -36,6 +36,25 @@ Resolving deltas: 100% (334/334), done.
 ...
 ```
 
+## Usage
+Add it in your root build.gradle at the end of repositories:
+```
+allprojects {
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+}
+```
+Step 2. Add the dependency
+```
+  dependencies {
+    ...
+    implementation 'com.github.lavego.sales-sdk:saleSdk:1.0' // the SDK package
+    implementation 'com.github.lavego.sales-sdk:utils:1.0' // the utils package
+  }
+```
+
 ## Contributing
 
 TODO, write how to contribute...
