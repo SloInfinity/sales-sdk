@@ -41,6 +41,7 @@ public class CompletionForRegister extends Apdu
                 this.tid = Commons.BCDToString(new byte[]{
                         data()[++idx],
                         data()[++idx],
+                        data()[++idx],
                         data()[++idx]
                 });
             }
