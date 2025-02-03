@@ -333,6 +333,7 @@ public class Tag
                 length[0] = (byte) 0x82;
                 length[1] = (byte) (this.bao_val.size() / 256);
                 length[2] = (byte) (this.bao_val.size() - (asInt(length[1]) * 256));
+                break;
             default:
                 length[0] = 0x00;
                 break;
