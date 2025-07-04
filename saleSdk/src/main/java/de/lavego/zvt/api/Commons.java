@@ -450,10 +450,33 @@ public class Commons
     {
         byte[] bcd = new byte[bytes];
 
-        // 3 bytes are 3*2 single values for example
-        for (int idx = num.length(); idx < (2 * bytes); ++idx)
-        {
-            num = String.format("0%s", num);
+        // Input validation
+        if (num == null || num.isEmpty()) {
+            num = "0";
+        }
+
+        // Remove any non-numeric characters and handle negative numbers
+        num = num.replaceAll("[^0-9]", "");
+        if (num.isEmpty()) {
+            num = "0";
+        }
+
+        // Calculate required string length (2 characters per byte for BCD)
+        int requiredLength = 2 * bytes;
+
+        // Pad with leading zeros to reach required length
+        while (num.length() < requiredLength) {
+            num = "0" + num;
+        }
+
+        // Truncate if too long (as mentioned in the TODO)
+        if (num.length() > requiredLength) {
+            num = num.substring(num.length() - requiredLength);
+        }
+
+        // Ensure even number of characters (should always be true now, but safety check)
+        if (num.length() % 2 != 0) {
+            num = "0" + num;
         }
 
         try
@@ -462,6 +485,7 @@ public class Commons
         }
         catch (DecoderException e)
         {
+            Log.e("StringNumberToBCD", "Failed to decode hex string: '" + num + "' (length: " + num.length() + ")", e);
             e.printStackTrace();
         }
 
